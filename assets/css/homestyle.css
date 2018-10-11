@@ -1,0 +1,121 @@
+/* Carousel base class */
+.carousel {
+  height: 500px;
+  margin-bottom: 20px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 0;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+
+.image_home{
+  width: 100%;
+  height: 100%;
+}
+#search-row{
+  margin-top: 0px;
+  background-color: white;
+  height: 50px;
+  border-radius: 30px;
+}
+#sec1{
+  height: 400px; 
+  background-color: grey;
+}
+.para_1{
+  margin-top: 110px;
+  color: #4d0000;
+  font-size: 30px;
+}
+#search_1{
+  margin-top: 0px;
+  height: 50px;
+  border-radius: 30px 0px 0px 30px;
+  padding: 0;
+}
+
+#search_2{
+  margin-top: 0px;
+  height: 50px;
+  border-radius: 0px;
+  padding: 0;
+}
+#search_3{
+  margin-top: 0px;
+  height: 50px;
+  border-radius: 0px;
+  padding: 0;
+}
+#search_input{
+  height: 50px;
+  border-radius: 0px 0px 0px 0px;
+  padding: 0;
+
+}
+#search_input_1{
+  height: 50px;
+  border-radius: 30px 0px 0px 30px;
+  padding: 0;
+  padding-left: 20px;
+}
+
+#search_button{
+  background-color: #4d0000;
+  height: 50px;
+  border-radius: 0px 30px 30px 0px;
+}
+
+#search_button_1{
+  background-color: #4d0000;
+  height: 50px;
+  border:none;
+  width: 90%;
+  font-size: 16px;
+  color: #b3b3b3;
+}
+
+.search_text{
+  margin-top: 12px;
+  color: #b3b3b3;
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  #search_1{
+    margin-top: 0px;
+    background-color: white;
+    height: 50px;
+    border-radius: 30px;
+  }
+  #search_2{
+    margin-top: 0px;
+    background-color: white;
+    height: 50px;
+    border-radius: 30px;
+  }
+  #search_3{
+    margin-top: 0px;
+    background-color: white;
+    height: 50px;
+    border-radius: 30px;
+  }
+  #search_button{
+    margin-top: 0px;
+    background-color: white;
+    height: 50px;
+    border-radius: 30px;
+    background-color: #4d0000;
+  }
+}

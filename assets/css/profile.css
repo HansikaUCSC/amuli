@@ -1,0 +1,151 @@
+.img-box{
+	width: 135px;
+    height: 135px;
+    margin-left: 0px;
+    margin-right: 0;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+
+.img-box img{
+	width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+
+}
+
+.up{
+	margin-top: 70px;
+}
+.stylist_name{
+	font-size: 25px;
+	margin-top: 5%;
+	padding-left: 0;
+}
+
+#row_1{
+	margin-left: 0px;
+}
+
+#row_2{
+	margin-top: 30px;
+	margin-left: 0px;
+}
+
+.stylist_experience{
+	font-size: 18px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	text-align: right;
+}
+
+.stylist_Qualification{
+	font-size: 18px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	text-align: right;
+}
+
+.stylist_price{
+	font-size: 18px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	text-align: right;
+}
+
+.stylist_skill{
+	font-size: 18px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	text-align: right;
+}
+
+.stylist_city{
+	font-size: 18px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	text-align: right;
+}
+
+.stylist_contact_info{
+	font-size: 18px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	text-align: right;
+}
+
+.contact{
+	padding-left: 40px;
+	text-align: right;
+}
+
+.stylist_experience_asw{
+	font-size: 18px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	text-align: left;
+}
+
+.stylist_Qualification_asw{
+	font-size: 18px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	text-align: left;
+}
+
+.stylist_price_asw{
+	font-size: 18px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	text-align: left;
+}
+
+.stylist_skill_asw{
+	font-size: 18px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	text-align: left;
+}
+
+.stylist_city_asw{
+	font-size: 18px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	text-align: left;
+}
+
+#contact_row{
+	margin-top: 0;
+}
+
+.profile_img{
+	margin-left: 90px;
+}
+
+@media (max-width: 768px) {
+	.stylist_experience{
+		text-align: left;
+	}
+	.stylist_Qualification{
+		text-align: left;
+	}
+	.stylist_price{
+		text-align: left;
+	}
+	.stylist_skill{
+		text-align: left;
+	}
+	.stylist_city{
+		text-align: left;
+	}
+	.stylist_contact_info{
+		text-align: left;
+	}
+	.contact{
+		text-align: left;
+		padding-left: 0px;
+	}
+
+}
