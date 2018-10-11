@@ -2,6 +2,9 @@
 <html>
 <head>
 
+  <!-- import css files -->
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/nav.css">
+
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom: 0;">

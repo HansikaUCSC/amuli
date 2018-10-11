@@ -13,6 +13,9 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- import css files -->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/homestyle.css">
 	
 </head>
 
@@ -30,7 +33,7 @@
                         </center>
                     </div>
     				<div class="container-fluid">
-                        <form action="<?php echo base_url();?>index.php/Home/search_user" method="post">
+                        <form action="<?php echo base_url();?>index.php/SearchResult/search_user" method="post">
         					<div class="row" id="search-row">
                                 <center>
             						<div class="col-md-3 col-sm-3 col-xs-12" id="search_1">

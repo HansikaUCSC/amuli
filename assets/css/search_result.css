@@ -9,8 +9,10 @@
     top: 0;
 }
 
-#filter{
+#filter_by{
 	margin-top: 50px;
+	margin-left: 0;
+	margin-right: 0;
 }
 #text_filter{
 	padding-bottom: 0;

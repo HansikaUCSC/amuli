@@ -17,12 +17,12 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<!-- import css -->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/sidenav.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/search_result.css">
 
 </head>
 <body>
 
-	<div class="row" id="filter">
+	<div class="row" id="filter_by">
 		<div class="col-md-3 col-sm-3 col-xs-3" id="text_filter">
 			Filter By...
 		</div>

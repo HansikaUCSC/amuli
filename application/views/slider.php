@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!-- import css files -->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/homestyle.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/slider.css">
 </head>
 <body>
 <!-- Carousel -->
@@ -18,7 +18,7 @@
           <img class="first-slide" src="<?php echo base_url()?>assets/images/first_slider.JPG" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>WELCOM TO AMULI</h1>
+              <h1>WELCOME TO AMULI</h1>
               <p>"We bring colors to your world."</p>
             </div>
           </div>
@@ -27,8 +27,8 @@
           <img class="second-slide" src="<?php echo base_url()?>assets/images/first_slider.JPG" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <h1>Are you want to find the hair stylists??</h1>
+              <p>You can find the best hair stylists...</p>
             </div>
           </div>
         </div>
@@ -36,8 +36,8 @@
           <img class="third-slide" src="<?php echo base_url()?>assets/images/first_slider.JPG" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <h1>Want to rate hair stylists?</h1>
+              <p>You can easily give the feedback and rating to the hair stylist's service.</p>
             </div>
           </div>
         </div>

@@ -17,7 +17,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<!-- import css -->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/sidenav.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/search_result.css">
 
 </head>
 <body>
