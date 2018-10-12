@@ -68,6 +68,10 @@
     					<?php echo $data1['hs_experience']?> years of experience
     				</div>
     				<div>
+    					Price: $
+    					<?php echo $data1['hs_price']?> Per day
+    				</div>
+    				<div>
     					rating: 
     					<?php echo $data1['rate']?>
     				</div>

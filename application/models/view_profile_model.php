@@ -30,6 +30,15 @@ class View_profile_model extends CI_Model
             return $query->result_array();
         }
 
+        public function gallery($id){
+            $this->db->select('hair_stylist_gallery.*');
+            $this->db->from('hair_stylist_gallery');
+            $this->db->join('hair_stylists','hair_stylists.hs_id = hair_stylist_gallery.hs_id');
+            $this->db->where('hair_stylists.hs_id',$id);
+            $query = $this->db->get();
+            return $query->result_array();
+        }
+
         public function feedback($id){
             $this->db->select('hair_stylist_feedback.*,salon_owners.so_first_name,salon_owners.so_last_name,salon_owners.so_prof_img'); 
             $this->db->from('salon_owners');   

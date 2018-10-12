@@ -64,10 +64,12 @@ class Home extends CI_Controller
 
 	public function view_profile($id){
 		$query = $this->view_profile_model->view_profile_model($id);
-		$query1 = $this->view_profile_model->load_skill($id);
+		$query_skill = $this->view_profile_model->load_skill($id);
+		$query_gallery = $this->view_profile_model->gallery($id);
 		if ($query) {
 			$data['profile'] = $query;
-			$data['skill'] = $query1;
+			$data['skill'] = $query_skill;
+			$data['ld_gallery'] = $query_gallery;
 			$this->load->view('nav');
 			$this->load->view('profile_page',$data);
 			$this->load->view('calendar');
