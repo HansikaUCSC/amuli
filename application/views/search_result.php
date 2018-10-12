@@ -34,22 +34,46 @@
 	<div class="vl"></div>
 	<div class="container-fluid">
 		<div class="row">
+			<!-- secondary search -->
 			<div class="col-md-3 col-sm-3 col-xs-3">
+				<?php  if($search_ref[0] != null){ ?>
 				<div class="filters">Name</div>
-				<input class="input_filter" type="text" name="name" placeholder="stylist name">
+				<input class="input_filter" type="text" name="name" placeholder="<?php echo $search_ref[0] ?>" disabled="">
 				<br>
+				<?php }else{ ?>
+				<div class="filters">Name</div>
+				<input class="input_filter" type="text" name="name" placeholder="Stylist Name">
+				<br>
+				<?php } ?>
+
+				<?php  if($search_ref[1] != null){ ?>
 				<div class="filters">City</div>
-				<input class="input_filter" type="text" name="city" placeholder="City">
+				<input class="input_filter" type="text" name="city" placeholder="<?php echo $search_ref[1] ?>" disabled="">
 				<br>
-				<div class="filters">Skill</div>
-				<input class="input_filter" type="text" name="skill" placeholder="Skill">
+				<?php }else{ ?>
+				<div class="filters">City</div>
+				<select class="form-control input_filter " name="location">
+                    <option value="">Select Location</option>
+                    <?php foreach ($cities as $city) { ?>
+                    	<option value="<?php echo $city['city_name']?>"><?php echo $city['city_name']?></option>
+                    <?php } ?> 
+                </select>
 				<br>
+				<?php } ?>
+
 				<div class="filters">Rating</div>
-				<input class="input_filter" type="text" name="rating" placeholder="Rating">
+				<select class="form-control input_filter " name="rate">
+                    <option value="">Select Rating</option>
+                    <?php foreach ($ratings as $rating) { ?>
+                    	<option value="<?php echo $rating['rate']?>"><?php echo $rating['rate']?></option>
+                    <?php } ?> 
+                </select>
 				<br>
-				<div class="filters">Price per day</div>
+				<div class="filters">Price per day($)</div>
 				<input class="input_filter" type="text" name="price" placeholder="peice">
 			</div>
+
+			<!-- display search result -->
 			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 ">
 				<?php foreach($user as $data1) { ?>
 				<div class="row detail_row">
@@ -76,6 +100,7 @@
     					<?php echo $data1['rate']?>
     				</div>
 				</div>
+				<!-- view profile & book stylist -->
 				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
     				<div class="botton_v_b">
     					<a href="<?php echo base_url()?>index.php/Home/view_profile/<?php echo $data1['hs_id']?>"><input class="input_button" type="submit" value="View Profile"></a>

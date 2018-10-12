@@ -32,6 +32,7 @@
 	</div>
 	<hr style="margin-top: 0px;">
 	<div class="vl"></div>
+	<!-- secondary search -->
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-3 col-sm-3 col-xs-3">
@@ -40,9 +41,6 @@
 				<br>
 				<div class="filters">City</div>
 				<input class="input_filter" type="text" name="city" placeholder="City">
-				<br>
-				<div class="filters">Skill</div>
-				<input class="input_filter" type="text" name="skill" placeholder="Skill">
 				<br>
 				<div class="filters">Rating</div>
 				<input class="input_filter" type="text" name="rating" placeholder="Rating">

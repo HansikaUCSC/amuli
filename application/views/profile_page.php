@@ -20,6 +20,7 @@
 
 </head>
 <body>
+	<!-- load image & brief description -->
 	<?php foreach($profile as $data1) { ?>
 	<div class="row" id="row_1">
 		<div class="col-lg-6 col-md-7 col-sm-8 col-xs-12 profile_img">
@@ -33,9 +34,13 @@
 			</div>
 		</div>
 	</div>
+
 	<hr>
+
+	<!-- Display other details -->
 	<div class="row" id="main_row">
 		<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">	
+			<!-- experience -->
 			<div class="row" id="row_2">
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 					<div class="col-lg-4 col-md-5 col-sm-6 col-xs-12">
@@ -46,6 +51,8 @@
 					</div>
 				</div>
 			</div>
+
+			<!-- Education level -->
 			<div class="row" id="row_2">
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 					<div class="col-lg-4 col-md-5 col-sm-6 col-xs-12">
@@ -56,6 +63,8 @@
 					</div>
 				</div>
 			</div>
+
+			<!-- price -->
 			<div class="row" id="row_2">
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 					<div class="col-lg-4 col-md-5 col-sm-6 col-xs-12">
@@ -66,6 +75,8 @@
 					</div>
 				</div>
 			</div>
+
+			<!-- skills -->
 			<div class="row" id="row_2">
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 					<div class="col-lg-4 col-md-5 col-sm-6 col-xs-12">
@@ -78,16 +89,20 @@
 					</div>
 				</div>
 			</div>
+
+			<!-- Location -->
 			<div class="row" id="row_2">
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">	
 					<div class="col-lg-4 col-md-5 col-sm-6 col-xs-12">
-						<b><div class="stylist_city">Avalibale City</div></b>
+						<b><div class="stylist_city">Location</div></b>
 					</div>
 					<div class="col-lg-8 col-md-7 col-sm-6 col-xs-12">
 						<div class="stylist_city_asw"><?php echo $data1['city_name']?></div>
 					</div>
 				</div>
 			</div>
+
+			<!-- contact info -->
 			<div class="row" id="row_2">
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">	
 					<div class="col-lg-4 col-md-5 col-sm-6 col-xs-12">
@@ -113,7 +128,11 @@
 			</div>
 		</div>
 		
+		<!-- display gallery -->
 		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 gallery">
+			<div row>
+				<h2 class="gallery_heading">Gallery</h2>
+			</div>
 			<div class="row">
 				<?php foreach($ld_gallery as $data) { ?>
 				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">

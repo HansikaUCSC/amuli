@@ -27,5 +27,10 @@ class Home_model extends CI_Model
             return $query->result_array();
         }
 
+        public function dropdown_rating(){
+            $query = $this->db->get('rating');
+            return $query->result_array();
+        }
+
         
 }

@@ -2,7 +2,7 @@ h1{
   text-align: center;
 }
 
-.calendar-day {
+/*.calendar-day {
   width: 100px;
   min-width: 100px;
   max-width: 100px;
@@ -86,7 +86,7 @@ h1{
 .table-tight-vert > tfoot > tr > td {
   padding-top: 0;
   padding-bottom: 0;
-}
+}*/
 
 #con_img{
   background-image: url('../images/283.jpg');

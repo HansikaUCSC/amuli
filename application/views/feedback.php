@@ -39,6 +39,7 @@
                     </div>
                     <?php  $i++;} ?>
                     </div>
+                    
                 <!-- Carousel controls -->
                 <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
                     <i class="fa fa-angle-left"></i>

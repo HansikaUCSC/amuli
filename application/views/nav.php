@@ -21,7 +21,6 @@
       <a class="navbar-brand" style="padding-top: 0px;" href="<?php echo base_url();?>index.php/Home/index">
       <img class="img" src=<?php echo base_url();?>assets/images/logo.png></a>
     </div>
-    <!-- / .navbar-header -->
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -31,10 +30,8 @@
         <li><a href="#">Sign up</a></li>
       </ul>
     </div>
-    <!-- /.navbar-collapse -->
 
   </div>
-  <!-- /.container-fluid -->
 
 </nav>
 </body>

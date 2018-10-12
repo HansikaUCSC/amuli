@@ -20,6 +20,7 @@
 </head>
 
 <body>
+
 	<div class="container-fluid">
   		<div class="row">
     		<div class="col-md-4" id="sec1">
@@ -32,6 +33,8 @@
                             <p class="para_1">Find a Hair Stylist</p>
                         </center>
                     </div>
+
+                    <!-- primary search -->
     				<div class="container-fluid">
                         <form action="<?php echo base_url();?>index.php/Home/search_user" method="post">
         					<div class="row" id="search-row">
@@ -52,7 +55,6 @@
                                 </center>
                                 <center>
             						<div class="col-md-3 col-sm-3 col-xs-12" id="search_3">
-            							<!-- <input class="search_input" type="text" name="skill" placeholder="Skills"> -->
                                         <select class="form-control " id="search_input" name="skill">
                                            <option value="">select skill</option>
                                            <?php foreach ($skills as $skill) { ?>
@@ -69,6 +71,7 @@
         					</div>
                         </form>
     				</div>
+                    
     			</div>
     		</div>
   		</div>
