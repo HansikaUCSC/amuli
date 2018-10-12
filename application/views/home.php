@@ -33,7 +33,7 @@
                         </center>
                     </div>
     				<div class="container-fluid">
-                        <form action="<?php echo base_url();?>index.php/SearchResult/search_user" method="post">
+                        <form action="<?php echo base_url();?>index.php/Home/search_user" method="post">
         					<div class="row" id="search-row">
                                 <center>
             						<div class="col-md-3 col-sm-3 col-xs-12" id="search_1">
