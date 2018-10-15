@@ -17,6 +17,7 @@ class View_profile_model extends CI_Model
             $this->db->join('rating','rating.rate_id=hair_stylists.hs_rate_id');
             $this->db->where('hair_stylists.hs_id',$id);
             $query = $this->db->get();
+            // var_dump($query);
             return $query->result_array();
         }
 

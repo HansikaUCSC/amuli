@@ -26,16 +26,16 @@
                 <div class="carousel-inner">
                      <?php
                      $i = 0;
-                      foreach($use as $data1){?> 
+                      foreach($testimonial as $data){?> 
                         
                         <?php if($i == 0){ ?>
                              <div class="item active">
                             <?php } else{ ?>
                     <div class="item">
                     <?php } ?>
-                        <div class="img-box"><img src="<?php echo base_url()?><?php echo $data1['hs_prof_img']?>" alt=""></div>
-                        <p class="testimonial"><?php echo $data1['testimonial']?></p>
-                        <p class="overview"><b><?php echo $data1['hs_first_name']?>  <?php echo $data1['hs_last_name']?></b></p>
+                        <div class="img-box"><img src="<?php echo base_url()?><?php echo $data['hs_prof_img']?>" alt=""></div>
+                        <p class="testimonial"><?php echo $data['testimonial']?></p>
+                        <p class="overview"><b><?php echo $data['hs_first_name']?>  <?php echo $data['hs_last_name']?></b></p>
                     </div>
                     <?php  $i++;} ?>
                 </div>

@@ -25,7 +25,7 @@
           </div>
         </div>
         <div class="item">
-          <img class="second-slide" src="<?php echo base_url()?>assets/images/first_slider.JPG" alt="Second slide">
+          <img class="second-slide" src="<?php echo base_url()?>assets/images/slider4.JPG" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>Are you want to find the hair stylists??</h1>
@@ -34,7 +34,7 @@
           </div>
         </div>
         <div class="item">
-          <img class="third-slide" src="<?php echo base_url()?>assets/images/first_slider.JPG" alt="Third slide">
+          <img class="third-slide" src="<?php echo base_url()?>assets/images/slider1.JPG" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>Want to rate hair stylists?</h1>

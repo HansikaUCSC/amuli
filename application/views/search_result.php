@@ -36,7 +36,7 @@
 		<div class="row">
 			<!-- secondary search -->
 			<div class="col-md-3 col-sm-3 col-xs-3">
-				<form action="<?php echo base_url();?>index.php/Home/sec_search_user" method="post">
+				<form action="<?php echo base_url();?>index.php/Home/search_user" method="post">
 					<div class="filters" id="skill_req">Skill*</div>
 					<select class="form-control input_filter " name="skill">
 	                    <option value="">Select skills</option>
@@ -73,37 +73,38 @@
 			</div>
 
 			<!-- display search result -->
-			<?php if ($user >0) { ?>
+			<?php if ($search_result >0) { ?>
 				<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 ">
-				<?php foreach($user as $data1) { ?>
+				<?php foreach($search_result as $data) { ?>
 				<div class="row detail_row">
 				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-					<div class="img-box" ><img src="<?php echo base_url()?><?php echo $data1['hs_prof_img']?>" alt=""></div>
+					<div class="img-box" ><img src="<?php echo base_url()?><?php echo $data['hs_prof_img']?>" alt=""></div>
 				</div>
 				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 result">
     				<div>
-    					<?php echo $data1['hs_first_name']?>
-    					<?php echo $data1['hs_last_name']?>
+    					<?php echo $data['hs_first_name']?>
+    					<?php echo $data['hs_last_name']?>
     				</div>
     				<div>    				
-    					<?php echo $data1['skill_name']?> 
+    					<?php echo $data['skill_name']?> 
     				</div>
     				<div>
-    					<?php echo $data1['hs_experience']?> years of experience
+    					<?php echo $data['hs_experience']?> years of experience
     				</div>
     				<div>
     					Price: $
-    					<?php echo $data1['hs_price']?> Per day
+    					<?php echo $data['hs_price']?> Per day
     				</div>
     				<div>
     					Avarage rating: 
-    					<?php echo $data1['rate']?>
+    					<?php echo $data['rate']?>
     				</div>
 				</div>
+				
 				<!-- view profile & book stylist -->
 				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
     				<div class="botton_v_b">
-    					<a href="<?php echo base_url()?>index.php/Home/view_profile/<?php echo $data1['hs_id']?>"><input class="input_button" type="submit" value="View Profile"></a>
+    					<a href="<?php echo base_url()?>index.php/Home/view_profile/<?php echo $data['hs_id']?>"><input class="input_button" type="submit" value="View Profile"></a>
     				</div>
     				<div class="botton_v_b" id="id_botton_v_b"><input class="input_button" id="input_button_id" type="submit" value="Book Now"></div>
     			</div>
