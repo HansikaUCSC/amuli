@@ -36,7 +36,7 @@
 		<div class="row">
 			<!-- secondary search -->
 			<div class="col-md-3 col-sm-3 col-xs-3">
-				<form action="<?php echo base_url();?>index.php/Home/search_user" method="post">
+				<form action="<?php echo base_url();?>index.php/Home/sec_search_user" method="post">
 					<div class="filters" id="skill_req">Skill*</div>
 					<select class="form-control input_filter " name="skill">
 	                    <option value="">Select skills</option>
