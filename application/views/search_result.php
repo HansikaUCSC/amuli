@@ -36,45 +36,45 @@
 		<div class="row">
 			<!-- secondary search -->
 			<div class="col-md-3 col-sm-3 col-xs-3">
-				<?php  if($search_ref[0] != null){ ?>
-				<div class="filters">Name</div>
-				<input class="input_filter" type="text" name="name" placeholder="<?php echo $search_ref[0] ?>" disabled="">
-				<br>
-				<?php }else{ ?>
-				<div class="filters">Name</div>
-				<input class="input_filter" type="text" name="name" placeholder="Stylist Name">
-				<br>
-				<?php } ?>
-
-				<?php  if($search_ref[1] != null){ ?>
-				<div class="filters">City</div>
-				<input class="input_filter" type="text" name="city" placeholder="<?php echo $search_ref[1] ?>" disabled="">
-				<br>
-				<?php }else{ ?>
-				<div class="filters">City</div>
-				<select class="form-control input_filter " name="location">
-                    <option value="">Select Location</option>
-                    <?php foreach ($cities as $city) { ?>
-                    	<option value="<?php echo $city['city_name']?>"><?php echo $city['city_name']?></option>
-                    <?php } ?> 
-                </select>
-				<br>
-				<?php } ?>
-
-				<div class="filters">Rating</div>
-				<select class="form-control input_filter " name="rate">
-                    <option value="">Select Rating</option>
-                    <?php foreach ($ratings as $rating) { ?>
-                    	<option value="<?php echo $rating['rate']?>"><?php echo $rating['rate']?></option>
-                    <?php } ?> 
-                </select>
-				<br>
-				<div class="filters">Price per day($)</div>
-				<input class="input_filter" type="text" name="price" placeholder="peice">
+				<form action="<?php echo base_url();?>index.php/Home/search_user" method="post">
+					<div class="filters" id="skill_req">Skill*</div>
+					<select class="form-control input_filter " name="skill">
+	                    <option value="">Select skills</option>
+	                    <?php foreach ($skills as $skill) { ?>
+	                    	<option value="<?php echo $skill['skill_name']?>"><?php echo $skill['skill_name']?></option>
+	                    <?php } ?> 
+	                </select>
+					<br>
+					<div class="filters">Name</div>
+					<input class="input_filter" type="text" name="name" placeholder="Stylist Name">
+					<br>
+					<div class="filters">City</div>
+					<select class="form-control input_filter " name="location">
+	                    <option value="">Select Location</option>
+	                    <?php foreach ($cities as $city) { ?>
+	                    	<option value="<?php echo $city['city_name']?>"><?php echo $city['city_name']?></option>
+	                    <?php } ?> 
+	                </select>
+					<br>
+					<div class="filters">Rating</div>
+					<select class="form-control input_filter " name="rate">
+	                    <option value="">Select Rating</option>
+	                    <?php foreach ($ratings as $rating) { ?>
+	                    	<option value="<?php echo $rating['rate']?>"><?php echo $rating['rate']?></option>
+	                    <?php } ?> 
+	                </select>
+					<br>
+					<div class="filters">Price per day($)</div>
+					<input class="input_filter" type="text" name="price" placeholder="peice">
+					<div>
+						<input id="search_button_2" type="submit" value="Search">
+					</div>
+				</form>
 			</div>
 
 			<!-- display search result -->
-			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 ">
+			<?php if ($user >0) { ?>
+				<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 ">
 				<?php foreach($user as $data1) { ?>
 				<div class="row detail_row">
 				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
@@ -96,7 +96,7 @@
     					<?php echo $data1['hs_price']?> Per day
     				</div>
     				<div>
-    					rating: 
+    					Avarage rating: 
     					<?php echo $data1['rate']?>
     				</div>
 				</div>
@@ -110,6 +110,10 @@
 				</div>
 				<?php } ?>
 			</div>
+			<?php }else { ?>
+				<h1>No maching result...!!!</h1>
+			<?php } ?>
+			
 		</div>
 	</div>
 </body>

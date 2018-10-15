@@ -9,7 +9,7 @@ class Search_result_model extends CI_Model
 
         }
 
-        public function search_user($name, $location,$skill){
+        public function search_user($name, $location,$skill,$rating,$price){
             $this->db->select('*');
             $this->db->from('hair_stylists');
             $this->db->join('city', 'city.city_id=hair_stylists.hs_city_id');
@@ -25,6 +25,8 @@ class Search_result_model extends CI_Model
             }
             $this->db->like('city_name', $location);
             $this->db->like('skill_name',$skill);
+            $this->db->like('rate',$rating);
+            $this->db->like('hs_price',$price);
             $query = $this->db->get();  
             return $query->result_array();
         }

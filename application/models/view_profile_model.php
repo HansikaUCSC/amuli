@@ -48,6 +48,15 @@ class View_profile_model extends CI_Model
             $query = $this->db->get();
             return $query->result_array();
         }
+
+        public function avl_status($id){
+            $this->db->select('availability_status.*');
+            $this->db->from('availability_status');
+            $this->db->join('hair_stylists','availability_status.hs_id = hair_stylists.hs_id');
+            $this->db->where('hair_stylists.hs_id',$id);
+            $query = $this->db->get();
+            return $query->result_array();
+        }
 }
 
 ?>

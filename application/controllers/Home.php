@@ -36,7 +36,7 @@ class Home extends CI_Controller
 		$this->load->view('home',$data);
 	}
 
-	// laod search result page
+	// laod search result page (primary & secondary search)
 	public function search_user(){
 		$this->form_validation->set_rules('skill','skill_name','required');
 
@@ -49,9 +49,12 @@ class Home extends CI_Controller
 			$name = $this->input->post('name');
 			$location = $this->input->post('location');
 			$skill = $this->input->post('skill');
-	        $query = $this->search_result_model->search_user($name,$location,$skill);
+			$rating = $this->input->post('rate');
+			$price = $this->input->post('price');
+	        $query = $this->search_result_model->search_user($name,$location,$skill,$rating,$price);
 	        $data['cities'] = $this->home_model->dropdown_location();
 	        $data['ratings'] = $this->home_model->dropdown_rating();
+	        $data['skills'] = $this->home_model->dropdown_skill();
 	        $data['search_ref'] =  array($name, $location, $skill) ;
 	        $data['user'] = null;
 	        if ($query) {
@@ -61,7 +64,7 @@ class Home extends CI_Controller
 	        	$this->load->view('footer');
 	        }else {
 	        	$this->load->view('nav');
-	        	$this->load->view('no_search_result');
+	        	$this->load->view('search_result',$data);
 	        	$this->load->view('footer');	        
 	        }
 	    }
@@ -78,7 +81,8 @@ class Home extends CI_Controller
 			$data['ld_gallery'] = $query_gallery;
 			$this->load->view('nav');
 			$this->load->view('profile_page',$data);
-			$this->load_calendar();
+			// $this->load_calendar();
+			$this->availabale_status($id);
 			$this->feedback($id);
 			$this->load->view('footer');
 		}
@@ -94,6 +98,19 @@ class Home extends CI_Controller
 	   	else{
 	   		return false;
 	   	}
+	}
+
+	// load status
+	public function availabale_status($id){
+		$query = $this->view_profile_model->avl_status($id);
+		$data['status'] = null;
+		if ($query) {
+			$data['status'] = $query;
+			$this->load->view('availability_table',$data);
+		}
+		else{
+			return false;
+		}
 	}
 
 	// load calendar
