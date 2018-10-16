@@ -36,7 +36,7 @@
 		<div class="row">
 			<!-- secondary search -->
 			<div class="col-md-3 col-sm-3 col-xs-3">
-				<form action="<?php echo base_url();?>index.php/Home/search_user" method="post">
+				<form action="<?php echo base_url();?>index.php/UnitTest/search_user" method="post">
 					<div class="filters" id="skill_req">Skill*</div>
 					<select class="form-control input_filter " name="skill">
 	                    <option value="">Select skills</option>
@@ -104,7 +104,7 @@
 				<!-- view profile & book stylist -->
 				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
     				<div class="botton_v_b">
-    					<a href="<?php echo base_url()?>index.php/Home/view_profile/<?php echo $data['hs_id']?>"><input class="input_button" type="submit" value="View Profile"></a>
+    					<a href="<?php echo base_url()?>index.php/UnitTest/view_profile/<?php echo $data['hs_id']?>"><input class="input_button" type="submit" value="View Profile"></a>
     				</div>
     				<div class="botton_v_b" id="id_botton_v_b"><input class="input_button" id="input_button_id" type="submit" value="Book Now"></div>
     			</div>

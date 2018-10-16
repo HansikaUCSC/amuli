@@ -19,7 +19,7 @@ class Home_model extends CI_Model
 
         public function dropdown_location(){
             $query = $this->db->get('city');
-            return $query->result_array();
+            return $query->result_array();  
         }
 
         public function dropdown_skill(){

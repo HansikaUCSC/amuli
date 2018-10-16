@@ -49,7 +49,6 @@ class Home extends CI_Controller
 			$name = $this->input->post('name');
 			$location = $this->input->post('location');
 			$skill = $this->input->post('skill');
-			// echo $this->unit->run($name, 'hhhh', 'hhj');
 			$rating = $this->input->post('rate');
 			$price = $this->input->post('price');
 	        $query = $this->search_result_model->search_user($name,$location,$skill,$rating,$price);
@@ -70,37 +69,6 @@ class Home extends CI_Controller
 	    }
 	}
 
-	// public function sec_search_user(){
-	// 	$this->form_validation->set_rules('skill','skill_name','required');
-
-	// 	if ($this->form_validation->run() == False) {
-	// 		$this->load->view('error_msg');
-	// 		$this->load->view('search_result');
-	// 	}
-	// 	else{
-
-	// 		$name = $this->input->post('name');
-	// 		$location = $this->input->post('location');
-	// 		$skill = $this->input->post('skill');
-	// 		$rating = $this->input->post('rate');
-	// 		$price = $this->input->post('price');
-	//         $query = $this->search_result_model->sec_search_user($name,$location,$skill,$rating,$price);
-	//         $data['cities'] = $this->home_model->dropdown_location();
-	//         $data['ratings'] = $this->home_model->dropdown_rating();
-	//         $data['skills'] = $this->home_model->dropdown_skill();
-	//         $data['user'] = null;
-	//         if ($query) {
-	//         	$data['user'] = $query;
-	//         	$this->load->view('nav');
-	//         	$this->load->view('search_result',$data);
-	//         	$this->load->view('footer');
-	//         }else {
-	//         	$this->load->view('nav');
-	//         	$this->load->view('search_result',$data);
-	//         	$this->load->view('footer');	        
-	//         }
-	//     }
-	// }
 
 	// load view profile page
 	public function view_profile($id){
@@ -143,16 +111,6 @@ class Home extends CI_Controller
 			return false;
 		}
 	}
-
-
-
-
-	// Unit Testing
-
-	// test case 1
-	 public function test_primary_search(){
-
-	 }
 
 }
 ?>
