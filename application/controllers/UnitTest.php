@@ -42,7 +42,7 @@ class UnitTest extends CI_Controller {
 
 
 	// Unit Test
-	// test case 2
+	// test case 1
 	// test city dropdown
 	public function test_dropdown_city($c_data_return){
 		foreach ($c_data_return as $city =>$city_names){
@@ -60,7 +60,7 @@ class UnitTest extends CI_Controller {
 	}
 
 	// Unit Test
-	// test case 3
+	// test case 2
 	// test skill dropdown
 	public function test_dropdown_skill($s_data_return){
 		foreach ($s_data_return as $skill =>$skill_names){
@@ -97,6 +97,7 @@ class UnitTest extends CI_Controller {
 			$this->test_primary_search($primary_inputs);
 			$rating = $this->input->post('rate');
 			$price = $this->input->post('price');
+			$data['search_ref'] = array($skill,$name,$location,$rating,$price);
 	        $query = $this->search_result_model->search_user($name,$location,$skill,$rating,$price);
 	        $data['cities'] = $this->home_model->dropdown_location();
 	        $data['skills'] = $this->home_model->dropdown_skill();
@@ -116,7 +117,7 @@ class UnitTest extends CI_Controller {
 	}
 
 	// Unit Test
-	// test case 1
+	// test case 3
 	// test primary search passing data
 	public function test_primary_search($primary_inputs){
 		$test = $primary_inputs;
