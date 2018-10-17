@@ -186,7 +186,9 @@ class UnitTest extends CI_Controller {
 		$test = $id ;
 		$expected_result = "1";
 		$test_name = "Check the Schedule";
-		echo $this->unit->run($test,$expected_result,$test_name);
+		$this->unit->run($test,$expected_result,$test_name);
+		echo $this->unit->report();
+		// exit;
 	}
 
 

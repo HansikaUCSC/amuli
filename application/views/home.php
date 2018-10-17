@@ -36,7 +36,7 @@
 
                     <!-- primary search -->
     				<div class="container-fluid">
-                        <form action="<?php echo base_url();?>index.php/UnitTest/search_user" method="post">
+                        <form action="<?php echo base_url();?>index.php/Home/search_user" method="post">
         					<div class="row" id="search-row">
                                 <center>
             						<div class="col-md-3 col-sm-3 col-xs-12" id="search_1">
@@ -56,7 +56,7 @@
                                 <center>
             						<div class="col-md-3 col-sm-3 col-xs-12" id="search_3">
                                         <select class="form-control " id="search_input" name="skill">
-                                           <option value="">select skill</option>
+                                           <option value="">select skill*</option>
                                            <?php foreach ($skills as $skill) { ?>
                                               <option value="<?php echo $skill['skill_name']?>"><?php echo $skill['skill_name']?></option>
                                            <?php } ?> 

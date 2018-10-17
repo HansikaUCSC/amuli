@@ -36,7 +36,9 @@
 		<div class="row">
 			<!-- secondary search -->
 			<div class="col-md-3 col-sm-3 col-xs-3">
-				<form action="<?php echo base_url();?>index.php/UnitTest/search_user" method="post">
+				<form action="<?php echo base_url();?>index.php/Home/search_user" method="post">
+				<!-- select skill -->
+				
 					<div class="filters" id="skill_req">Skill*</div>
 					<select class="form-control input_filter " name="skill">
 	                    <option value="">Select skills</option>
@@ -45,9 +47,28 @@
 	                    <?php } ?> 
 	                </select>
 					<br>
+				
+				<!-- select name -->
+				<?php  if($search_ref[1] != null){ ?>
+					<div class="filters">Name</div>
+					<input class="input_filter" type="text" name="name" placeholder="<?php echo $search_ref[1] ?>">
+					<br>
+				<?php }else{ ?>
 					<div class="filters">Name</div>
 					<input class="input_filter" type="text" name="name" placeholder="Stylist Name">
 					<br>
+				<?php } ?>
+				<!-- select location -->
+				<?php  if($search_ref[2] != null){ ?>
+					<div class="filters">City</div>
+					<select class="form-control input_filter " name="location">
+	                    <option value=""><?php echo $search_ref[2] ?></option>
+	                    <?php foreach ($cities as $city) { ?>
+	                    	<option value="<?php echo $city['city_name']?>"><?php echo $city['city_name']?></option>
+	                    <?php } ?> 
+	                </select>
+					<br>
+				<?php }else{ ?>
 					<div class="filters">City</div>
 					<select class="form-control input_filter " name="location">
 	                    <option value="">Select Location</option>
@@ -56,6 +77,18 @@
 	                    <?php } ?> 
 	                </select>
 					<br>
+				<?php } ?>
+				<!-- Select rating -->
+				<?php  if($search_ref[3] != null){ ?>
+					<div class="filters">Rating</div>
+					<select class="form-control input_filter " name="rate">
+	                    <option value=""><?php echo $search_ref[3] ?></option>
+	                    <?php foreach ($ratings as $rating) { ?>
+	                    	<option value="<?php echo $rating['rate']?>"><?php echo $rating['rate']?></option>
+	                    <?php } ?> 
+	                </select>
+					<br>
+				<?php }else{ ?>
 					<div class="filters">Rating</div>
 					<select class="form-control input_filter " name="rate">
 	                    <option value="">Select Rating</option>
@@ -64,10 +97,20 @@
 	                    <?php } ?> 
 	                </select>
 					<br>
+				<?php } ?>
+				<!-- Select price -->
+				<?php  if($search_ref[4] != null){ ?>
+					<div class="filters">Price per day($)</div>
+					<input class="input_filter" type="text" name="price" placeholder="<?php echo $search_ref[4] ?>">
+					<br>
+				<?php }else{ ?>
 					<div class="filters">Price per day($)</div>
 					<input class="input_filter" type="text" name="price" placeholder="peice">
-					<div>
-						<input id="search_button_2" type="submit" value="Search">
+					<br>
+				<?php } ?>
+				<!-- search button -->
+					<div class="button_v_b" id="sec_search">
+						<input class="input_button" id="search_button_2" type="submit" value="Search">
 					</div>
 				</form>
 			</div>
@@ -103,10 +146,10 @@
 				
 				<!-- view profile & book stylist -->
 				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-    				<div class="botton_v_b">
-    					<a href="<?php echo base_url()?>index.php/UnitTest/view_profile/<?php echo $data['hs_id']?>"><input class="input_button" type="submit" value="View Profile"></a>
+    				<div class="button_v_b">
+    					<a href="<?php echo base_url()?>index.php/Home/view_profile/<?php echo $data['hs_id']?>"><input class="input_button" type="submit" value="View Profile"></a>
     				</div>
-    				<div class="botton_v_b" id="id_botton_v_b"><input class="input_button" id="input_button_id" type="submit" value="Book Now"></div>
+    				<div class="button_v_b" id="id_button_v_b"><input class="input_button" id="input_button_id" type="submit" value="Book Now"></div>
     			</div>
 				</div>
 				<?php } ?>

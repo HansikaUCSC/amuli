@@ -51,6 +51,7 @@ class Home extends CI_Controller
 			$skill = $this->input->post('skill');
 			$rating = $this->input->post('rate');
 			$price = $this->input->post('price');
+			$data['search_ref'] = array($skill,$name,$location,$rating,$price);
 	        $query = $this->search_result_model->search_user($name,$location,$skill,$rating,$price);
 	        $data['cities'] = $this->home_model->dropdown_location();
 	        $data['skills'] = $this->home_model->dropdown_skill();

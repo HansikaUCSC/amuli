@@ -73,11 +73,10 @@
 	margin-bottom: 10px;
 }
 
-.botton_v_b{
+.button_v_b{
 	background-color: #4d0000;
 	border-radius: 10px;
 	margin-top: 15px;
-	/*margin-bottom: 10px;*/
 	height: 45px;
 }
 
@@ -89,8 +88,13 @@
 	color: #b3b3b3;
 
 }
+#sec_search{
+	margin-left: 40%;
+	margin-bottom: 10px;
+	width: 25%;
+}
 
-#id_botton_v_b{
+#id_button_v_b{
 	background-color: #b3b3b3;
 }
 
@@ -100,9 +104,10 @@
 }
 
 #search_button_2{
-	margin-top: 20px;
-	margin-left: 50%;
+	margin-top: 12px;
 	margin-bottom: 20px;
+	background-color: #4d0000;
+	color: #b3b3b3;
 }
 #skill_req{
 	color: #4d0000;
